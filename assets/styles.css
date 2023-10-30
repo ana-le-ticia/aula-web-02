@@ -23,7 +23,7 @@ body{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 1rem;
+    padding: 0 2.5rem;
     width: 100%;
 
     position: fixed;
@@ -31,10 +31,18 @@ body{
     background: var(--white);
 }
 
+.menu a{
+    text-decoration: none;
+    color: var(--black);
+}
+
 .menu ul{
     display: flex;
     list-style: none;
     gap: 1rem;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
 }
 
 .menu img{
@@ -54,4 +62,72 @@ section{
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    background: var(--light-blue);
+}
+
+.right-side img{
+    position: relative;
+    overflow: hidden;
+}
+
+.left-side{
+    display: flex;
+    flex-direction: column;
+    height: 60%;
+
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.titulo-principal{
+    text-align: center;
+}
+
+.left-side p{
+    text-align: justify;
+    position: relative;
+
+    width: 70%;
+}
+
+@media (max-width: 399px){
+    .menu ul{
+        display: none;
+    }
+
+    section{
+        top: 0;
+    }
+}
+
+@media (max-width: 700px){
+    .logo{
+        display: none;
+    }
+    .menu{
+        justify-content: space-evenly;
+        margin: 0;
+    }
+    .menu ul{
+        gap: 2rem;
+        height: 6rem;
+    }
+    .right-side{
+        display: none;
+    }
+}
+
+@media (max-width: 1200px){
+    .right-side{
+        display: none;
+    }
+    .left-side{
+        padding: 3rem;
+    }
+    .left-side p{
+        position: relative;
+        width: 80%;
+        text-align: center;
+    }
 }
